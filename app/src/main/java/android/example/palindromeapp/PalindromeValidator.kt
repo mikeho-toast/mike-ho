@@ -10,8 +10,8 @@ object PalindromeValidator {
         var endIndex = filteredInputword.lastIndex
 
         if ((endIndex + 1) % 2 == 0) { //even inputWord String
-            while (startIndex < endIndex) {
-                if (filteredInputword[startIndex] != filteredInputword[endIndex]) {
+            while (startIndex < endIndex) { // when the start index is less than the end index, do this loop
+                if (filteredInputword[startIndex] != filteredInputword[endIndex]) { //check to see if the left index value is not equal to the right index value
                     return false
                 }
                 startIndex++
@@ -20,13 +20,12 @@ object PalindromeValidator {
             return true
         }
         if ((endIndex + 1) % 2 != 0) { //odd inputWord String
-            while (startIndex != endIndex) {
-                if (filteredInputword[startIndex] != filteredInputword[endIndex]) {
+            while (startIndex != endIndex) { //while the start index is not equal to the end index
+                if (filteredInputword[startIndex] != filteredInputword[endIndex]) { // check to see if the left index value is not equal to the right index value
                     return false
-                } else if (filteredInputword[startIndex] == filteredInputword[endIndex]) {
-                    startIndex++
-                    endIndex--
                 }
+                startIndex++
+                endIndex--
             }
             return true
         }
