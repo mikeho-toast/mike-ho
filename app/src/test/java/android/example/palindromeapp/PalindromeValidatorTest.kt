@@ -126,6 +126,18 @@ class PalindromeValidatorTest {
     }
 
     @Test
+    fun `Chinese name is not a palindrome`() {
+        //arrange
+        var testData = "何嘉仁"
+
+        // act
+        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+
+        // assert
+        assertFalse(result)
+    }
+
+    @Test
     fun `Word with greek symbols is not a palindrome `() {
         //arrange
         var testData = "Καλημέρα"
@@ -184,5 +196,18 @@ class PalindromeValidatorTest {
 
         //assert
         assertFalse(result)
+    }
+
+    @Test
+    fun `Symbol phrase is a palindrome`() {
+        //arrange
+        var testData = "!@#$%^&*()"
+
+        //act
+        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+
+        //assert
+        assertTrue(result)
+
     }
 }
