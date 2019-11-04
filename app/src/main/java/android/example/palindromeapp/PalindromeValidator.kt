@@ -9,7 +9,7 @@ object PalindromeValidator {
         var startIndex = 0
         var endIndex = filteredInputword.lastIndex
 
-        if ((endIndex + 1) % 2 == 0) { //even inputWord
+        if ((endIndex + 1) % 2 == 0) { //even inputWord String
             while (startIndex < endIndex) {
                 if (filteredInputword[startIndex] != filteredInputword[endIndex]) {
                     return false
@@ -19,7 +19,7 @@ object PalindromeValidator {
             }
             return true
         }
-        if ((endIndex + 1) % 2 != 0) { //odd inputWord
+        if ((endIndex + 1) % 2 != 0) { //odd inputWord String
             while (startIndex != endIndex) {
                 if (filteredInputword[startIndex] != filteredInputword[endIndex]) {
                     return false
