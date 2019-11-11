@@ -8,10 +8,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Single letter word is a palindrome`() {
         // arrange
-        var testData = "a"
+        val testData = "a"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertTrue(result)
@@ -20,10 +20,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Two like letter word is a palindrome`() {
         //arrange
-        var testData = "bb"
+        val testData = "bb"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertTrue(result)
@@ -32,10 +32,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Palindrome name with a capital first letter is not a palindrome`() {
         //arrange
-        var testData = "Ana"
+        val testData = "Ana"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertFalse(result)
@@ -44,10 +44,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Longer type word is palindrome`() {
         //arrange
-        var testData = "tacocat"
+        val testData = "tacocat"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertTrue(result)
@@ -56,10 +56,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Two different letter word is not a palindrome`() {
         //arrange
-        var testData = "do"
+        val testData = "do"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertFalse(result)
@@ -68,10 +68,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Number phrase can be detected as a palindrome`() {
         //arrange
-        var testData = "19191"
+        val testData = "19191"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         //assert
         assertTrue(result)
@@ -80,10 +80,10 @@ class PalindromeValidatorTest {
     @Test
     fun `A Single emoji as a word is a palindrome`() {
         //arrange
-        var testData = "A"
+        val testData = "A"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertTrue(result)
@@ -92,10 +92,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Palindrome word with an extra letter at the end is not a palindrome`() {
         //arrange
-        var testData = "racecars"
+        val testData = "racecars"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertFalse(result)
@@ -104,10 +104,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Phrase with letters, symbols and numbers is a palindrome`() {
         //arrange
-        var testData = "#801LOL108#"
+        val testData = "#801LOL108#"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertTrue(result)
@@ -116,10 +116,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Chinese phrase is a palindrome`() {
         //arrange
-        var testData = "谢谢"
+        val testData = "谢谢"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertTrue(result)
@@ -128,10 +128,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Chinese name is not a palindrome`() {
         //arrange
-        var testData = "何嘉仁" //Ho Ga Ren
+        val testData = "何嘉仁" //Ho Ga Ren
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertFalse(result)
@@ -140,10 +140,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Word with greek symbols is not a palindrome `() {
         //arrange
-        var testData = "Καλημέρα"
+        val testData = "Καλημέρα"
 
         // act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         // assert
         assertFalse(result)
@@ -153,10 +153,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Phrase going forward and backwards is a palindrome`() {
         //arrange
-        var testData = "PandaadnaP"
+        val testData = "PandaadnaP"
 
         //act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         //assert
         assertTrue(result)
@@ -165,10 +165,10 @@ class PalindromeValidatorTest {
     @Test
     fun `No phrase is a palindrome`() {
         //arrange
-        var testData = ""
+        val testData = ""
 
         //act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         //assert
         assertTrue(result)
@@ -177,10 +177,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Even number character phrase`() {
         //arrange
-        var testData = "True"
+        val testData = "True"
 
         //act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         //assert
         assertFalse(result)
@@ -189,10 +189,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Odd number character phrase`() {
         //arrange
-        var testData = "False"
+        val testData = "False"
 
         //act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         //assert
         assertFalse(result)
@@ -201,10 +201,10 @@ class PalindromeValidatorTest {
     @Test
     fun `Only symbol phrase is a palindrome`() {
         //arrange
-        var testData = "!@!"
+        val testData = "!@!"
 
         //act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         //assert
         assertTrue(result)
@@ -214,13 +214,26 @@ class PalindromeValidatorTest {
     @Test
     fun `Symbols followed by a letter at the end should be a palindrome`() {
         //arrange
-        var testData = "!@#@!F"
+        val testData = "!@#@!F"
 
         //act
-        var result: Boolean = PalindromeValidator.checkPalindrome(testData)
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
 
         //assert
         assertTrue(result)
 
     }
+
+    @Test
+    fun `Emoji should be a palindrome`() {
+        //arrange
+        val testData = "🐼"
+
+        //act
+        val result: Boolean = PalindromeValidator.checkPalindrome(testData)
+
+        //assert
+        assertTrue(result)
+    }
+        
 }

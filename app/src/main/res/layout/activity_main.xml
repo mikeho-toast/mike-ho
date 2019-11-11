@@ -37,15 +37,23 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:text="Enter a phrase to verify if it is a palindrome!" />
+
+        <TextView
+            android:id="@+id/appHint"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="30sp"
+            android:text="Note: Symbols do not count as part of the phrase" />
 
         <EditText
             android:id="@+id/inputString"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="35dp"
+            android:textSize="35sp"
             android:hint="Type a word..."
             android:background="@color/colorPrimary"
             android:ems="20"
@@ -56,7 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textSize="25dp"
+            android:textSize="25sp"
             android:text="Enter" />
     </LinearLayout>
 
